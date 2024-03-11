@@ -1,0 +1,610 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Foodee Demo Menu and hotel website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Foodee Demo - Experience the essence of traditional Indian flavors at Foodee. Indulge in our curated menu of authentic dishes crafted with the finest ingredients."
+    />
+    <meta
+      name="keywords"
+      content="Idris, Hotel, Restaurant, Foodee, Menu, Booking, Demo, IV, Product"
+    />
+    <meta name="author" content="Idris Vohra" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="Foodee - Authentic Indian Cuisine" />
+    <meta property="og:image" content="/static/images/favicon.png" />
+    <meta property="og:url" content="https://foodee-demo.vercel.app/" />
+    <meta
+      property="og:site_name"
+      content="Foodee - Traditional Indian Restaurant"
+    />
+    <meta
+      property="og:description"
+      content="Experience the essence of traditional Indian flavors at Foodee. Indulge in our curated menu of authentic dishes crafted with the finest ingredients."
+    />
+    <meta name="twitter:title" content="Foodee - Authentic Indian Cuisine" />
+    <meta name="twitter:image" content="/static/images/favicon.png" />
+    <meta name="twitter:url" content="https://foodee-demo.vercel.app/" />
+    <meta name="twitter:card" content="/static/images/favicon.png" />
+    <link rel="shortcut icon" href="/static/favicon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Merriweather:300,400italic,300italic,400,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="/static/css/animate.css" />
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="/static/css/icomoon.css" />
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="/static/css/simple-line-icons.css" />
+    <!-- Datetimepicker -->
+    <link
+      rel="stylesheet"
+      href="/static/css/bootstrap-datetimepicker.min.css"
+    />
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="/static/css/flexslider.css" />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="/static/css/style.css?{% now 'U' %}" />
+
+    <script src="/static/js/modernizr-2.6.2.min.js"></script>
+  </head>
+  <body>
+    <div id="iv-container">
+      <div id="iv-home" class="js-fullheight" data-section="home">
+        <div class="flexslider">
+          <div class="iv-overlay"></div>
+          <div class="iv-text">
+            <div class="container">
+              <div class="row">
+                <h1 class="to-animate">foodee</h1>
+                <h2 class="to-animate">
+                  Lovely Designed <span>by</span>
+                  <a href="https://iv-portfolio.vercel.app/" target="_blank"
+                    >Idris</a
+                  >
+                </h2>
+              </div>
+            </div>
+          </div>
+          <ul class="slides">
+            <li
+              style="background-image: url(/static/images/slide_1.jpg)"
+              data-stellar-background-ratio="0.5"
+            ></li>
+            <li
+              style="background-image: url(/static/images/slide_2.jpg)"
+              data-stellar-background-ratio="0.5"
+            ></li>
+            <li
+              style="background-image: url(/static/images/slide_3.jpg)"
+              data-stellar-background-ratio="0.5"
+            ></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="js-sticky">
+        <div class="iv-main-nav">
+          <div class="container-fluid">
+            <div class="iv-menu-1">
+              <a href="#iv-home" data-nav-section="home">Home</a>
+              <a href="#iv-about" data-nav-section="about">About</a>
+              <a href="#iv-features" data-nav-section="features"
+                >Featured dishes</a
+              >
+            </div>
+            <div class="iv-logo">
+              <a href="/">foodee</a>
+            </div>
+            <div class="iv-menu-2">
+              <a href="#iv-menu" data-nav-section="menu">Menu</a>
+              <a href="#iv-contact" data-nav-section="reservation"
+                >Reservation</a
+              >
+              <a href="#iv-events" data-nav-section="events">Events</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="iv-about" data-section="about">
+        <div
+          class="iv-2col iv-bg to-animate-2"
+          style="background-image: url(/static/images/res_img_1.jpg)"
+        ></div>
+        <div class="iv-2col iv-text">
+          <h2 class="heading to-animate">About Us</h2>
+          <p class="to-animate">
+            <span class="firstcharacter">F</span>ar far away, behind the word
+            mountains, far from the countries Vokalia and Consonantia, there
+            live the blind texts. Separated they live in Bookmarksgrove right at
+            the coast of the Semantics, a large language ocean. Far far away,
+            behind the word mountains, far from the countries Vokalia and
+            Consonantia, there live the blind texts. A small river named Duden
+            flows by their place and supplies it with the necessary regelialia.
+            It is a paradisematic country, in which roasted parts of sentences
+            fly into your mouth. Even the all-powerful Pointing has no control
+            about the blind texts it is an almost unorthographic life.
+          </p>
+          <p class="text-center to-animate">
+            <a href="#" class="btn btn-primary btn-outline">Get in touch</a>
+          </p>
+        </div>
+      </div>
+      <div id="iv-featured" data-section="features">
+        <div class="container">
+          <div class="row text-center iv-heading row-padded">
+            <div class="col-md-8 col-md-offset-2">
+              <h2 class="heading to-animate">Featured Dishes</h2>
+              <p class="sub-heading to-animate">
+                Dishes that customers love the most.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="iv-grid">
+              {% for item in featuredItems %}
+                <div class="iv-v-half to-animate-2">
+                  <img class="iv-v-col-2" src="{{ item.display_picture }}" />
+                  <div class="iv-v-col-2 iv-text iv-special-1 arrow-left">
+                    <h2>{{ item.name }}</h2>
+                    <span class="pricing">₹{{ item.price }}</span>
+                    <p>{{ item.description }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div id="iv-menus" data-section="menu">
+        <div class="container">
+          <div class="row text-center iv-heading row-padded">
+            <div class="col-md-8 col-md-offset-2">
+              <h2 class="heading to-animate">Food Menu</h2>
+              <p class="sub-heading to-animate">
+                Our creatively designed menu. Each item made with love.
+              </p>
+            </div>
+          </div>
+          <div class="row row-padded">
+            {% for category in categories %} 
+            {% if category.menuitem_set.all %}
+            <div class="col-md-6">
+              <div class="iv-food-menu to-animate-2">
+                <h2>
+                  <img
+                    src="{{ category.display_picture }}"
+                    alt="Category display"
+                    style="width: 64px; height: 64px; margin-right: 15px"
+                  />{{ category.name }}
+                </h2>
+                <ul>
+                  {% for menu_item in category.menuitem_set.all %} 
+                  {% if menu_item.is_available %}
+                  <li>
+                    <div class="iv-food-desc">
+                      <figure>
+                        <img
+                          src="{{ menu_item.display_picture }}"
+                          class="img-responsive"
+                          alt="Menu Item display"
+                          style="width: 90px; height: 65px; object-fit: contain"
+                        />
+                      </figure>
+                      <div>
+                        <h3>{{ menu_item.name }}</h3>
+                        <p>{{ menu_item.description }}</p>
+                      </div>
+                    </div>
+                    <div class="iv-food-pricing">₹{{ menu_item.price }}</div>
+                  </li>
+                  {% endif %} 
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            {% endif %} 
+            {% endfor %}
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4 text-center to-animate-2">
+              <p>
+                <a href="#" class="btn btn-primary btn-outline"
+                  >More Food Menu</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="iv-sayings">
+        <div class="container">
+          <div class="row to-animate">
+            <div class="flexslider">
+              <ul class="slides">
+                <li>
+                  <blockquote>
+                    <p>
+                      &ldquo;Cooking is an art, but all art requires knowing
+                      something about the techniques and materials&rdquo;
+                    </p>
+                    <p class="quote-author">&mdash; Nathan Myhrvold</p>
+                  </blockquote>
+                </li>
+                <li>
+                  <blockquote>
+                    <p>
+                      &ldquo;Give a man food, and he can eat for a day. Give a
+                      man a job, and he can only eat for 30 minutes on
+                      break.&rdquo;
+                    </p>
+                    <p class="quote-author">&mdash; Lev L. Spiro</p>
+                  </blockquote>
+                </li>
+                <li>
+                  <blockquote>
+                    <p>
+                      &ldquo;Find something you’re passionate about and keep
+                      tremendously interested in it.&rdquo;
+                    </p>
+                    <p class="quote-author">&mdash; Julia Child</p>
+                  </blockquote>
+                </li>
+                <li>
+                  <blockquote>
+                    <p>
+                      &ldquo;Never work before breakfast; if you have to work
+                      before breakfast, eat your breakfast first.&rdquo;
+                    </p>
+                    <p class="quote-author">&mdash; Josh Billings</p>
+                  </blockquote>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="iv-contact" data-section="reservation">
+        <div class="container">
+          <div class="row text-center iv-heading row-padded">
+            <div class="col-md-8 col-md-offset-2">
+              <h2 class="heading to-animate">Reserve a Table</h2>
+              <p class="sub-heading to-animate">
+                Reservation offers a seamless experience for customers and
+                eliminates wait times.
+                <b>
+                  We kindly request that tables be reserved at least 2 to 3
+                  hours in advance. Reservation charges are directly calculated
+                  on the bill and may vary based on the occasion. To ensure the
+                  reservation remains valid, we recommend arriving on time, as
+                  reservations expire after 45 minutes of delay.
+                </b>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 to-animate-2">
+              <h3>Contact Info</h3>
+              <ul class="iv-contact-info">
+                <li class="iv-contact-address">
+                  <i class="icon-home"></i>
+                  5555 Love Paradise 56 New Clity 5655, <br />Excel Tower United
+                  Kingdom
+                </li>
+                <li><i class="icon-phone"></i> (123) 465-6789</li>
+                <li><i class="icon-envelope"></i>info@idris</li>
+                <li>
+                  <i class="icon-globe"></i>
+                  <a href="https://iv-portfolio.vercel.app/" target="_blank"
+                    >Idris</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <form class="col-md-6 to-animate-2" method="post" id="reservation-form">
+              {% csrf_token %} 
+              {{ customer_form.as_p }} 
+              {{ reservation_form.as_p}}
+              <h3>Reservation Form</h3>
+              <div class="form-group">
+                <label for="name" class="sr-only">Name</label>
+                <input
+                  id="name"
+                  class="form-control"
+                  placeholder="Name"
+                  type="text"
+                  required
+                  name="name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email" class="sr-only">Email</label>
+                <input
+                  id="email"
+                  class="form-control"
+                  placeholder="Email address"
+                  type="email"
+                  required
+                  name="email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="number" class="sr-only">Phone No.</label>
+                <input
+                  id="number"
+                  class="form-control"
+                  placeholder="Phone Number (+91)"
+                  type="text"
+                  required
+                  name="phone_no"
+                />
+              </div>
+              <div class="form-group">
+                <label for="number-o-guests" class="sr-only"
+                  >Number of Guests</label
+                >
+                <select
+                  class="form-control"
+                  id="number-o-guests"
+                  name="number_of_guests"
+                  required
+                >
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="occasion" class="sr-only">Occasion</label>
+                <select
+                  class="form-control"
+                  id="occasion"
+                  name="occasion"
+                  required
+                >
+                  <option>Select an Occasion</option>
+                  <option value="Wedding Cermony">Wedding Ceremony</option>
+                  <option value="Birthday">Birthday</option>
+                  <option selected value="regular">Regular</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="date" class="sr-only">Date</label>
+                <input
+                  id="date"
+                  class="form-control"
+                  placeholder="Date &amp; Time"
+                  type="datetime"
+                  name="date_time"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="sr-only">Message</label>
+                <textarea
+                  name="special_requests"
+                  id="message"
+                  cols="30"
+                  rows="5"
+                  class="form-control"
+                  maxlength="200"
+                  placeholder="Message (Any Special requests)"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                
+                <label for="save-info" style="display: inline-flex; margin-right: 10px;font-size: 15px; justify-content: center;align-items: center;">
+                  <input type="checkbox" id="save-info" class="form-control" style="width: 17px; height: 17px;margin-right: 5px;" name="save-info"/> Save Account info
+                </label>
+                <input
+                  class="btn btn-primary"
+                  value="Reserve table"
+                  type="submit"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        id="iv-type"
+        style="background-image: url(/static/images/slide_3.jpg)"
+        data-stellar-background-ratio="0.5"
+      >
+        <div class="iv-overlay"></div>
+        <div class="container">
+          <div class="row">
+            {% for category in categories %}
+
+            <div class="col-md-3 to-animate">
+              <div class="iv-type">
+                <h3>
+                  <img
+                    src="{{category.display_picture}}"
+                    alt="Category Image"
+                    style="
+                      width: 100px;
+                      height: 100px;
+                      mix-blend-mode: screen;
+                      position: absolute;
+                      left: 50%;
+                      margin-left: -54px;
+                      margin-top: -125px;
+                      border: 2px solid rgba(89, 89, 89, 0.2);
+                      -webkit-border-radius: 50%;
+                      -moz-border-radius: 50%;
+                      -ms-border-radius: 50%;
+                      border-radius: 50%;
+                      filter: invert(1);
+                      object-fit: contain;
+                    "
+                  />
+                  <span style="margin-top: 20px"> {{category.name}} </span>
+                </h3>
+                <p>{{category.description}}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="iv-events"
+        data-section="events"
+        style="background-image: url(/static/images/slide_2.jpg)"
+        data-stellar-background-ratio="0.5"
+      >
+        <div class="iv-overlay"></div>
+        <div class="container">
+          <div class="row text-center iv-heading row-padded">
+            <div class="col-md-8 col-md-offset-2 to-animate">
+              <h2 class="heading">Upcoming Events</h2>
+              <p class="sub-heading"></p>
+            </div>
+          </div>
+          <div class="row">
+            {% for event in events %}
+
+            <div class="col-md-4">
+              <div class="iv-event to-animate-2">
+                <h3>{{event.title}}</h3>
+                <span class="iv-event-meta">{{event.date}}</span>
+                <p>{{event.description}}</p>
+                <p>
+                  <a href="#" class="btn btn-primary btn-outline">Read More</a>
+                </p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="iv-footer">
+      <div class="container">
+        <div class="row row-padded">
+          <div class="col-md-12 text-center">
+            <p class="to-animate">
+              &copy; 2016 Foodee. <br />
+              Designed by
+              <a href="https://iv-portfolio.vercel.app/" target="_blank"
+                >Idris</a
+              >
+              <br />
+            </p>
+            <p class="text-center to-animate">
+              <a href="#" class="js-gotop">Go To Top</a>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <ul class="iv-social">
+              <li class="to-animate-2">
+                <a href="#"><i class="icon-facebook"></i></a>
+              </li>
+              <li class="to-animate-2">
+                <a href="#"><i class="icon-twitter"></i></a>
+              </li>
+              <li class="to-animate-2">
+                <a href="#"><i class="icon-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/static/js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="/static/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Bootstrap DateTimePicker -->
+    <script src="/static/js/moment.js"></script>
+    <script src="/static/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- Waypoints -->
+    <script src="/static/js/jquery.waypoints.min.js"></script>
+    <!-- Stellar Parallax -->
+    <script src="/static/js/jquery.stellar.min.js"></script>
+
+    <!-- Flexslider -->
+    <script src="/static/js/jquery.flexslider-min.js"></script>
+    <script>
+      $(function () {
+        $("#date").datetimepicker();
+      });
+
+      // For saving the user information to localstorage:
+      $("#reservation-form").submit(function (e) {
+        e.preventDefault();
+        console.log("Form submitted!");
+        var formData = $(this).serialize(); // Serialize form data
+        console.log(formData);
+
+        // Save customer data for next time logic:
+        let saveInfo = $("#save-info");
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let number = $("#number").val();
+        let accountInfo = {name, email, number}
+        if(saveInfo.is(":checked")){
+          localStorage.setItem("saved-info", JSON.stringify(accountInfo));
+        }
+
+        $.ajax({
+          type: 'POST',
+          url: '/make_reservation/',
+          data: formData,
+          success: function(response) {
+              // Handle success response
+              console.log(response);
+              // Show a success message or perform any necessary action
+          },
+          error: function(error) {
+              // Handle error response
+              console.error('Error:', error);
+              // Show an error message or perform any necessary action
+          }
+      });
+      });
+
+      // Getting the saved user data from before:
+      $(document).ready(function(){
+        let savedInfo = localStorage.getItem("saved-info");
+        if(savedInfo){
+          let storedAccountInfo = JSON.parse(savedInfo);
+          console.log(storedAccountInfo);
+          let name = $("#name").val(storedAccountInfo.name);
+          let email = $("#email").val(storedAccountInfo.email);
+          let number = $("#number").val(storedAccountInfo.number);
+        }
+      });
+    </script>
+    <!-- Main JS -->
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>
